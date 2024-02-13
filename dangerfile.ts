@@ -105,5 +105,5 @@ if (template) {
         markdown('### If something should not be filled in, comment "n/a" in the topic.')
     }
 } else {
-    fail('Danger.js could not find the Github markdown template.')
+    fail('Danger.js could not find the Github markdown template')
 }
