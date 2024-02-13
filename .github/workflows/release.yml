@@ -15,6 +15,7 @@ jobs:
         - name: Checkout
           uses: actions/checkout@v4
 
+        - run: yarn install
         - run: yarn dev
         # - run: docker build -t release ../../
         # - run: docker run --rm -p 3000:3000 release
