@@ -1,0 +1,15 @@
+name: Release 🚀
+run-name: Release 🚀
+on: 
+    pull_request: 
+        types:
+            - opened
+            - reopened
+            - edited
+            - synchronize
+
+jobs:
+    release:
+        runs-on: ubuntu-latest
+        steps:
+        - run: yarn dev # Free gambiarra service
