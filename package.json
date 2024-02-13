@@ -5,7 +5,8 @@
   "license": "MIT",
   "scripts": {
     "dev": "tsc -w & webpack-dev-server ./public",
-    "build": "webpack ./public",
+    "build": "webpack ./public && yarn run-server",
+    "run-server": "node ./server/server-system.js",
     "test": "test"
   },
   "devDependencies": {
@@ -32,6 +33,7 @@
     "webpack-dev-server": "^4.15.1"
   },
   "dependencies": {
+    "express": "^4.18.2",
     "react": "^18.2.0",
     "react-dom": "^18.2.0"
   }

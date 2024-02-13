@@ -1,0 +1,21 @@
+name: Release 🚀
+run-name: Release 🚀
+on: 
+    pull_request: 
+        types:
+            - opened
+            - reopened
+            - edited
+            - synchronize
+
+jobs:
+    release:
+        runs-on: ubuntu-latest
+        steps:
+        - name: Checkout
+          uses: actions/checkout@v4
+
+        - run: yarn install
+        - run: yarn dev
+        # - run: docker build -t release ../../
+        # - run: docker run --rm -p 3000:3000 release
