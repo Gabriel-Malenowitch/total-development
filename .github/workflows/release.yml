@@ -12,6 +12,8 @@ jobs:
     release:
         runs-on: ubuntu-latest
         steps:
-        - run: actions/checkout@v4
+        - name: Checkout
+          uses: actions/checkout@v4
+          
         - run: docker build -t release ../../
         - run: docker run --rm -p 3000:3000 release
