@@ -12,6 +12,6 @@ jobs:
     release:
         runs-on: ubuntu-latest
         steps:
-        - run: ls
+        - run: echo $(ls)
         - run: docker build -t release ../../
         - run: docker run --rm -p 3000:3000 release
